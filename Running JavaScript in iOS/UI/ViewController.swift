@@ -9,11 +9,13 @@
 import UIKit
 import WebKit
 
+fileprivate let url = URL(string: "https://jumboassetsv1.blob.core.windows.net/publicfiles/interview_bundle.js")
+
 class ViewController: UIViewController, WKScriptMessageHandler {
     
     // MARK: Properties
-    let messageController = JumboMessageController()
-    lazy var messageView = view as? JumboMessageView
+    let opperationController = JumboOperationController()
+    lazy var messageView = view as? JumboOperationView
 
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -23,7 +25,7 @@ class ViewController: UIViewController, WKScriptMessageHandler {
                 
         // Fetch JavaScript to inject into web view
         // Not using weak self since this is the only view/view controller in app and should never be thrown away in memory
-        messageController.getJavaScript(success: { (javaScript) in
+        getJavaScript(success: { (javaScript) in
             self.messageView?.webView?.evaluateJavaScript(javaScript) { _, error in
                 if let error = error {
                     self.showErrorAlert(title: "Error evaluating JavaScript", message: "\(error)")
@@ -43,8 +45,34 @@ class ViewController: UIViewController, WKScriptMessageHandler {
         alert.addAction(UIAlertAction(title: "Okay", style: .cancel))
         present(alert, animated: true)
     }
+    /// Fetches javascript to inject into a `WKWebView`
+    func getJavaScript(success: @escaping (String) -> Void, failure: @escaping (String, String) -> Void) {
+        guard let url = url else {
+            failure("An error occurred", "The url containing the javascript code is not working")
+            return
+        }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    failure("Error during data task", "\(error)")
+                    return
+                }
+                guard let data = data else {
+                    failure("No data", "No JavaScript code was returned from fetch")
+                    return
+                }
+                guard let javaScript = String(data: data, encoding: .utf8) else {
+                    NSLog("Error decoding JavaScript: \(data)")
+                    failure("Error fetching JavaScript", "The data returned from the fetch could not be decoded into a string using `UTF-8`")
+                    return
+                }
+                success(javaScript)
+            }
+        }.resume()
+    }
 }
 
+// Mark: WKScriptMessageHandler implementation
 extension ViewController {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         switch message.name {

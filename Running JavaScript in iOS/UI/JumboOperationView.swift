@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class JumboMessageView: UIView {
+class JumboOperationView: UIView {
     
     // MARK: IBOutlets
     @IBOutlet weak var numberLabel: UILabel!
