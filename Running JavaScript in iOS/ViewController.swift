@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let messageController = JumboMessageController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        messageController.getJavaScript(success: { (javaScriptString) in
+            
+        }, failure: { (title, message) in
+            
+        })
     }
 
 

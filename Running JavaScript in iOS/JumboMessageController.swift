@@ -19,20 +19,20 @@ class JumboMessageController {
             return
         }
         URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                failure("Error during data task", "\(error)")
-                return
-            }
-            guard let data = data else {
-                failure("No data", "No JavaScript code was returned from fetch")
-                return
-            }
-            guard let javaScript = String(data: data, encoding: .utf8) else {
-                NSLog("Error decoding JavaScript: \(data)")
-                failure("Error fetching JavaScript", "The data returned from the fetch could not be decoded into a string using `UTF-8`")
-                return
-            }
             DispatchQueue.main.async {
+                if let error = error {
+                    failure("Error during data task", "\(error)")
+                    return
+                }
+                guard let data = data else {
+                    failure("No data", "No JavaScript code was returned from fetch")
+                    return
+                }
+                guard let javaScript = String(data: data, encoding: .utf8) else {
+                    NSLog("Error decoding JavaScript: \(data)")
+                    failure("Error fetching JavaScript", "The data returned from the fetch could not be decoded into a string using `UTF-8`")
+                    return
+                }
                 success(javaScript)
             }
         }.resume()
