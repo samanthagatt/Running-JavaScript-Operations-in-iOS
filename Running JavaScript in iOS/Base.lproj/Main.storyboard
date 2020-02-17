@@ -16,22 +16,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HiV-V5-ys9">
-                                <rect key="frame" x="129.5" y="94" width="155" height="32"/>
+                                <rect key="frame" x="130" y="103" width="154.5" height="32"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAF-89-yk9">
-                                        <rect key="frame" x="0.0" y="0.0" width="11" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAF-89-yk9">
+                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="KJA-Zj-XMO">
-                                        <rect key="frame" x="19" y="0.0" width="94" height="32"/>
+                                        <rect key="frame" x="18.5" y="0.0" width="94" height="32"/>
                                         <connections>
                                             <action selector="changeNumber:" destination="8bC-Xf-vdC" eventType="valueChanged" id="nrV-Vg-hKd"/>
                                         </connections>
                                     </stepper>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnO-fG-2xA">
-                                        <rect key="frame" x="121" y="0.0" width="34" height="32"/>
+                                        <rect key="frame" x="120.5" y="0.0" width="34" height="32"/>
                                         <state key="normal" title="Start"/>
                                         <connections>
                                             <action selector="startOperations:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="c2c-yX-pmN"/>
@@ -40,53 +40,74 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="tHa-DN-gvo">
-                                <rect key="frame" x="40" y="166" width="334" height="110"/>
+                                <rect key="frame" x="40" y="175" width="334" height="146"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rIE-B0-LB1">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="2"/>
+                                        <color key="tintColor" red="0.65983116630000005" green="0.59622830149999995" blue="0.80786639449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c4W-2b-aWk">
                                         <rect key="frame" x="0.0" y="36" width="334" height="2"/>
+                                        <color key="tintColor" red="0.65983116630000005" green="0.59622830149999995" blue="0.80786639449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="trw-eq-7F1">
                                         <rect key="frame" x="0.0" y="72" width="334" height="2"/>
+                                        <color key="tintColor" red="0.65983116630000005" green="0.59622830149999995" blue="0.80786639449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sFn-GO-Q9J">
                                         <rect key="frame" x="0.0" y="108" width="334" height="2"/>
+                                        <color key="tintColor" red="0.65983116630000005" green="0.59622830149999995" blue="0.80786639449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
-                                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yRB-mS-YEu">
-                                        <rect key="frame" x="0.0" y="110" width="334" height="0.0"/>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yRB-mS-YEu">
+                                        <rect key="frame" x="0.0" y="144" width="334" height="2"/>
+                                        <color key="tintColor" red="0.65983116630000005" green="0.59622830149999995" blue="0.80786639449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                     <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-1X-xpA">
-                                        <rect key="frame" x="0.0" y="110" width="334" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="146" width="334" height="0.0"/>
+                                        <color key="tintColor" red="0.65983116630000005" green="0.59622830149999995" blue="0.80786639449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                     <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0P7-xA-Rro">
-                                        <rect key="frame" x="0.0" y="110" width="334" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="146" width="334" height="0.0"/>
+                                        <color key="tintColor" red="0.65983116630000005" green="0.59622830149999995" blue="0.80786639449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                     <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ufu-Zi-axF">
-                                        <rect key="frame" x="0.0" y="110" width="334" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="146" width="334" height="0.0"/>
+                                        <color key="tintColor" red="0.65983116630000005" green="0.59622830149999995" blue="0.80786639449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                     <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="z2n-33-Vmt">
-                                        <rect key="frame" x="0.0" y="110" width="334" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="146" width="334" height="0.0"/>
+                                        <color key="tintColor" red="0.65983116630000005" green="0.59622830149999995" blue="0.80786639449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                     <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GFn-tD-nhk">
-                                        <rect key="frame" x="0.0" y="110" width="334" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="146" width="334" height="0.0"/>
+                                        <color key="tintColor" red="0.65983116630000005" green="0.59622830149999995" blue="0.80786639449999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </progressView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tD1-R7-Lf0">
+                                <rect key="frame" x="23" y="50" width="368" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetOperations:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="dZn-ak-XtD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tD1-R7-Lf0" secondAttribute="trailing" constant="23" id="2gK-mC-X53"/>
                             <constraint firstItem="tHa-DN-gvo" firstAttribute="top" secondItem="HiV-V5-ys9" secondAttribute="bottom" constant="40" id="9ce-b7-mjJ"/>
                             <constraint firstItem="HiV-V5-ys9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B2j-3D-rp3"/>
                             <constraint firstItem="tHa-DN-gvo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="EeU-uS-uOD"/>
-                            <constraint firstItem="HiV-V5-ys9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="I0M-7o-vdH"/>
+                            <constraint firstItem="HiV-V5-ys9" firstAttribute="top" secondItem="tD1-R7-Lf0" secondAttribute="bottom" constant="23" id="I0M-7o-vdH"/>
+                            <constraint firstItem="tD1-R7-Lf0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="PPx-Bc-STR"/>
                             <constraint firstItem="tHa-DN-gvo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-40" id="bOH-s9-c1X"/>
+                            <constraint firstItem="tD1-R7-Lf0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="s5l-qe-6to"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outlet property="numberLabel" destination="gAF-89-yk9" id="Ja7-s2-lpf"/>
                             <outlet property="numberStepper" destination="KJA-Zj-XMO" id="sH4-9z-77h"/>
+                            <outlet property="resetButton" destination="tD1-R7-Lf0" id="Pgn-dI-eff"/>
                             <outlet property="startButton" destination="dnO-fG-2xA" id="R0r-L6-qd8"/>
                             <outletCollection property="progressViews" destination="trw-eq-7F1" collectionClass="NSMutableArray" id="THD-I8-jbg"/>
                             <outletCollection property="progressViews" destination="rIE-B0-LB1" collectionClass="NSMutableArray" id="Oq5-AE-gAR"/>

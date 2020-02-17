@@ -22,6 +22,22 @@ class JumboOperationController {
     func getOperation(_ id: String) -> JumboOperation? {
         return operations[id]
     }
+    @discardableResult
+    func updateOperation(from message: JumboMessage) -> JumboOperation? {
+        var op = getOperation(message.id)
+        if let progress = message.progress {
+            op?.progress = Float(progress) / 100
+        }
+        // If state property is provided by message set succeeded property of operation
+        if let state = message.state {
+            op?.succeeded = state == "success"
+            if op?.succeeded == true {
+                // Sets progress if succeeded since progress property is not provided by message once operation has been completed
+                op?.progress = 1
+            }
+        }
+        return op
+    }
     func clearOperations() {
         operations = [:]
     }

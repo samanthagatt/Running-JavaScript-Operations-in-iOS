@@ -10,9 +10,9 @@ import Foundation
 
 struct JumboOperation {
     /// Unique id for operation
-    var id: String
+    let id: String
     /// Progress of operation as an integer 0 - 100
-    var progress: Int = 0
+    var progress: Float = 0
     /**
      Status of operation
      
@@ -25,5 +25,5 @@ struct JumboOperation {
     var succeeded: Bool? = nil
     
     /// Index corresponding to the order of operations displayed in view
-    var index: Int
+    let index: Int
 }
