@@ -20,6 +20,7 @@
 		D6E00AB923FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AB823FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift */; };
 		D6E00AC123FB10FF00CBA952 /* JumboOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAE23FADECA00CBA952 /* JumboOperation.swift */; };
 		D6E00AC223FB110200CBA952 /* JumboOperationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAA23FAD10B00CBA952 /* JumboOperationController.swift */; };
+		D6E00AC323FB13AB00CBA952 /* JumboMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AA423F74E3500CBA952 /* JumboMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +248,7 @@
 				D6E00AB923FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift in Sources */,
 				D6E00AC223FB110200CBA952 /* JumboOperationController.swift in Sources */,
 				D6E00AC123FB10FF00CBA952 /* JumboOperation.swift in Sources */,
+				D6E00AC323FB13AB00CBA952 /* JumboMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct JumboOperation {
+struct JumboOperation: Equatable {
     /// Unique id for operation
     let id: String
     /// Progress of operation as an integer 0 - 100

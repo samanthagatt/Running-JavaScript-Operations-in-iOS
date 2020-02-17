@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import WebKit
 
 class Running_JavaScript_in_iOS_Tests: XCTestCase {
     
@@ -23,11 +24,41 @@ class Running_JavaScript_in_iOS_Tests: XCTestCase {
         XCTAssertEqual(testIndex, testOp.index)
     }
 
-    func testAddOperationReturnsCorrectId() {
+    func testAddOperation() {
         let testOp = JumboOperation(id: "test1", index: 0)
         let testOpController = JumboOperationController()
         
         let opId = testOpController.addOperation(testOp.id, index: testOp.index)
+        
+        let notNilOp = testOpController.operations[opId]
+        XCTAssertNotNil(notNilOp)
+        guard let storedOp = notNilOp else { XCTFail(); return }
+        XCTAssertEqual(testOp, storedOp)
+        
+        // Makes sure addOperation() returns the correct id string
         XCTAssertEqual(testOp.id, opId)
+    }
+    
+    func testClearOperations() {
+        let testOp = JumboOperation(id: "test1", index: 0)
+        let testOpController = JumboOperationController()
+        testOpController.addOperation(testOp.id, index: testOp.index)
+        
+        XCTAssertNotEqual(testOpController.operations, [:])
+        testOpController.clearOperations()
+        XCTAssertEqual(testOpController.operations, [:])
+    }
+    
+    func testUpdateOperation() {
+        let testMessage = JumboMessage(id: "test1", message: "", progress: 30, state: nil)
+        let testOpController = JumboOperationController()
+        
+        testOpController.addOperation(testMessage.id, index: 0)
+        let operation = testOpController.updateOperation(from: testMessage)
+        guard let op = operation else { XCTFail(); return }
+        XCTAssertEqual(testMessage.id, op.id)
+        XCTAssertEqual(testMessage.progress, Int(op.progress * 100))
+        let succeeded = testMessage.state == nil ? nil : testMessage.state == "success" ? true : false
+        XCTAssertEqual(succeeded, op.succeeded)
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 class JumboOperationController {
     
     // MARK: Properties
-    private var operations: [String: JumboOperation] = [:]
+    private(set) var operations: [String: JumboOperation] = [:]
     
     // MARK: Methods
     @discardableResult
@@ -19,12 +19,9 @@ class JumboOperationController {
         operations[id] = JumboOperation(id: id, index: index)
         return id
     }
-    func getOperation(_ id: String) -> JumboOperation? {
-        return operations[id]
-    }
     @discardableResult
     func updateOperation(from message: JumboMessage) -> JumboOperation? {
-        var op = getOperation(message.id)
+        var op = operations[message.id]
         if let progress = message.progress {
             op?.progress = Float(progress) / 100
         }
