@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import WebKit
+@testable import Running_JavaScript_in_iOS
 
 class Running_JavaScript_in_iOS_Tests: XCTestCase {
     
