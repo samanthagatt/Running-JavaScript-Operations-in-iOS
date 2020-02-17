@@ -17,7 +17,18 @@
 		D6E00AAB23FAD10C00CBA952 /* JumboOperationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAA23FAD10B00CBA952 /* JumboOperationController.swift */; };
 		D6E00AAD23FAD43E00CBA952 /* JumboOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAC23FAD43E00CBA952 /* JumboOperationView.swift */; };
 		D6E00AAF23FADECA00CBA952 /* JumboOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAE23FADECA00CBA952 /* JumboOperation.swift */; };
+		D6E00AB923FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AB823FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6E00ABB23FB0F8B00CBA952 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6E00A8123F749A600CBA952 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6E00A8823F749A600CBA952;
+			remoteInfo = "Running JavaScript in iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D6E00A8923F749A600CBA952 /* Running JavaScript in iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Running JavaScript in iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +43,20 @@
 		D6E00AAA23FAD10B00CBA952 /* JumboOperationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumboOperationController.swift; sourceTree = "<group>"; };
 		D6E00AAC23FAD43E00CBA952 /* JumboOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumboOperationView.swift; sourceTree = "<group>"; };
 		D6E00AAE23FADECA00CBA952 /* JumboOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumboOperation.swift; sourceTree = "<group>"; };
+		D6E00AB623FB0F8B00CBA952 /* Running JavaScript in iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Running JavaScript in iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6E00AB823FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Running_JavaScript_in_iOS_Tests.swift; sourceTree = "<group>"; };
+		D6E00ABA23FB0F8B00CBA952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D6E00A8623F749A600CBA952 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E00AB323FB0F8B00CBA952 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E00A8B23F749A600CBA952 /* Running JavaScript in iOS */,
+				D6E00AB723FB0F8B00CBA952 /* Running JavaScript in iOS Tests */,
 				D6E00A8A23F749A600CBA952 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				D6E00A8923F749A600CBA952 /* Running JavaScript in iOS.app */,
+				D6E00AB623FB0F8B00CBA952 /* Running JavaScript in iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +118,15 @@
 			path = "Models and Controllers";
 			sourceTree = "<group>";
 		};
+		D6E00AB723FB0F8B00CBA952 /* Running JavaScript in iOS Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D6E00AB823FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift */,
+				D6E00ABA23FB0F8B00CBA952 /* Info.plist */,
+			);
+			path = "Running JavaScript in iOS Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +147,24 @@
 			productReference = D6E00A8923F749A600CBA952 /* Running JavaScript in iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D6E00AB523FB0F8B00CBA952 /* Running JavaScript in iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6E00ABD23FB0F8B00CBA952 /* Build configuration list for PBXNativeTarget "Running JavaScript in iOS Tests" */;
+			buildPhases = (
+				D6E00AB223FB0F8B00CBA952 /* Sources */,
+				D6E00AB323FB0F8B00CBA952 /* Frameworks */,
+				D6E00AB423FB0F8B00CBA952 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6E00ABC23FB0F8B00CBA952 /* PBXTargetDependency */,
+			);
+			name = "Running JavaScript in iOS Tests";
+			productName = "Running JavaScript in iOS Tests";
+			productReference = D6E00AB623FB0F8B00CBA952 /* Running JavaScript in iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -127,6 +177,10 @@
 				TargetAttributes = {
 					D6E00A8823F749A600CBA952 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					D6E00AB523FB0F8B00CBA952 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D6E00A8823F749A600CBA952;
 					};
 				};
 			};
@@ -144,6 +198,7 @@
 			projectRoot = "";
 			targets = (
 				D6E00A8823F749A600CBA952 /* Running JavaScript in iOS */,
+				D6E00AB523FB0F8B00CBA952 /* Running JavaScript in iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +211,13 @@
 				D6E00A9923F749A800CBA952 /* LaunchScreen.storyboard in Resources */,
 				D6E00A9623F749A800CBA952 /* Assets.xcassets in Resources */,
 				D6E00A9423F749A600CBA952 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6E00AB423FB0F8B00CBA952 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +238,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6E00AB223FB0F8B00CBA952 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6E00AB923FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6E00ABC23FB0F8B00CBA952 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6E00A8823F749A600CBA952 /* Running JavaScript in iOS */;
+			targetProxy = D6E00ABB23FB0F8B00CBA952 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D6E00A9223F749A600CBA952 /* Main.storyboard */ = {
@@ -348,6 +426,46 @@
 			};
 			name = Release;
 		};
+		D6E00ABE23FB0F8B00CBA952 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84AK8SAYG2;
+				INFOPLIST_FILE = "Running JavaScript in iOS Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samanthagatt.Running-JavaScript-in-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Running JavaScript in iOS.app/Running JavaScript in iOS";
+			};
+			name = Debug;
+		};
+		D6E00ABF23FB0F8B00CBA952 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84AK8SAYG2;
+				INFOPLIST_FILE = "Running JavaScript in iOS Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samanthagatt.Running-JavaScript-in-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Running JavaScript in iOS.app/Running JavaScript in iOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -365,6 +483,15 @@
 			buildConfigurations = (
 				D6E00A9E23F749A800CBA952 /* Debug */,
 				D6E00A9F23F749A800CBA952 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6E00ABD23FB0F8B00CBA952 /* Build configuration list for PBXNativeTarget "Running JavaScript in iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6E00ABE23FB0F8B00CBA952 /* Debug */,
+				D6E00ABF23FB0F8B00CBA952 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
