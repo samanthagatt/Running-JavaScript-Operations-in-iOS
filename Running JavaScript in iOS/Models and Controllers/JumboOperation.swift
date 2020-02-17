@@ -23,4 +23,7 @@ struct JumboOperation {
      false = operation is done and failed
      */
     var succeeded: Bool? = nil
+    
+    /// Index corresponding to the order of operations displayed in view
+    var index: Int
 }

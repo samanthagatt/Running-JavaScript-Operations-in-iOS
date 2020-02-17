@@ -14,8 +14,10 @@ class JumboOperationController {
     private var operations: [String: JumboOperation] = [:]
     
     // MARK: Methods
-    func addOperation(_ id: String = UUID().uuidString) {
-        operations[id] = JumboOperation(id: id)
+    @discardableResult
+    func addOperation(_ id: String = UUID().uuidString, index: Int) -> String {
+        operations[id] = JumboOperation(id: id, index: index)
+        return id
     }
     func getOperation(_ id: String) -> JumboOperation? {
         return operations[id]

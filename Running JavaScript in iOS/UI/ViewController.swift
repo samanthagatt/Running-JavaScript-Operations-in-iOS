@@ -11,17 +11,16 @@ import WebKit
 
 fileprivate let url = URL(string: "https://jumboassetsv1.blob.core.windows.net/publicfiles/interview_bundle.js")
 
-class ViewController: UIViewController, WKScriptMessageHandler {
+class ViewController: UIViewController, WKScriptMessageHandler, ErrorAlertDelegate {
     
     // MARK: Properties
-    let opperationController = JumboOperationController()
     lazy var messageView = view as? JumboOperationView
 
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        messageView?.setup(self)
+        messageView?.setup(errorAlertDelegate: self, messageHandler: self)
                 
         // Fetch JavaScript to inject into web view
         // Not using weak self since this is the only view/view controller in app and should never be thrown away in memory
