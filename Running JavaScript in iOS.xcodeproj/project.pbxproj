@@ -18,6 +18,8 @@
 		D6E00AAD23FAD43E00CBA952 /* JumboOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAC23FAD43E00CBA952 /* JumboOperationView.swift */; };
 		D6E00AAF23FADECA00CBA952 /* JumboOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAE23FADECA00CBA952 /* JumboOperation.swift */; };
 		D6E00AB923FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AB823FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift */; };
+		D6E00AC123FB10FF00CBA952 /* JumboOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAE23FADECA00CBA952 /* JumboOperation.swift */; };
+		D6E00AC223FB110200CBA952 /* JumboOperationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAA23FAD10B00CBA952 /* JumboOperationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E00AB923FB0F8B00CBA952 /* Running_JavaScript_in_iOS_Tests.swift in Sources */,
+				D6E00AC223FB110200CBA952 /* JumboOperationController.swift in Sources */,
+				D6E00AC123FB10FF00CBA952 /* JumboOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
