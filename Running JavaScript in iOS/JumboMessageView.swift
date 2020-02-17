@@ -25,10 +25,14 @@ class JumboMessageView: UIView {
     var webView: WKWebView?
     
     // MARK: Methods
+    /// Sets up web view. Should be called in view controllers viewDidLoad.
     func setup(_ messageHandler: WKScriptMessageHandler) {
         let config = WKWebViewConfiguration()
         config.userContentController = WKUserContentController()
+        // Nothing will be displayed in webView so frame is set to .zero
         self.webView = WKWebView(frame: .zero, configuration: config)
+        // Adds script message handler window.webkit.messageHandlers.jumbo
+        // JavaScript code provided by Jumbo will call its .postMessage() function
         config.userContentController.add(messageHandler, name: "jumbo")
     }
 }
