@@ -15,6 +15,7 @@
 		D6E00A9923F749A800CBA952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E00A9723F749A800CBA952 /* LaunchScreen.storyboard */; };
 		D6E00AA523F74E3500CBA952 /* JumboMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AA423F74E3500CBA952 /* JumboMessage.swift */; };
 		D6E00AAB23FAD10C00CBA952 /* JumboMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAA23FAD10B00CBA952 /* JumboMessageController.swift */; };
+		D6E00AAD23FAD43E00CBA952 /* JumboMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E00AAC23FAD43E00CBA952 /* JumboMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D6E00A9A23F749A800CBA952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6E00AA423F74E3500CBA952 /* JumboMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumboMessage.swift; sourceTree = "<group>"; };
 		D6E00AAA23FAD10B00CBA952 /* JumboMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumboMessageController.swift; sourceTree = "<group>"; };
+		D6E00AAC23FAD43E00CBA952 /* JumboMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumboMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D6E00A8C23F749A600CBA952 /* AppDelegate.swift */,
 				D6E00A8E23F749A600CBA952 /* SceneDelegate.swift */,
 				D6E00A9023F749A600CBA952 /* ViewController.swift */,
+				D6E00AAC23FAD43E00CBA952 /* JumboMessageView.swift */,
 				D6E00AA423F74E3500CBA952 /* JumboMessage.swift */,
 				D6E00AAA23FAD10B00CBA952 /* JumboMessageController.swift */,
 				D6E00A9223F749A600CBA952 /* Main.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				D6E00A9123F749A600CBA952 /* ViewController.swift in Sources */,
 				D6E00AAB23FAD10C00CBA952 /* JumboMessageController.swift in Sources */,
+				D6E00AAD23FAD43E00CBA952 /* JumboMessageView.swift in Sources */,
 				D6E00A8D23F749A600CBA952 /* AppDelegate.swift in Sources */,
 				D6E00A8F23F749A600CBA952 /* SceneDelegate.swift in Sources */,
 				D6E00AA523F74E3500CBA952 /* JumboMessage.swift in Sources */,
